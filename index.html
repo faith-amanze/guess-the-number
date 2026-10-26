@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Guess the Number</title></head>
+<body style="font-family: sans-serif; max-width: 400px; margin: 40px auto;">
+  <h2>Guess the Number</h2>
+  <p>I'm thinking of a number between 1 and 100.</p>
+  <input id="guess" type="number" min="1" max="100">
+  <button onclick="check()">Guess</button>
+  <p id="msg"></p>
+  <script>
+    const number = Math.floor(Math.random() * 100) + 1;
+    function check() {
+      const g = parseInt(document.getElementById("guess").value);
+      const msg = document.getElementById("msg");
+      if (isNaN(g)) msg.textContent = "Please enter a whole number.";
+      else if (g > number) msg.textContent = "Your guess is too high. Guess again.";
+      else if (g < number) msg.textContent = "Your guess is too low. Guess again.";
+      else msg.textContent = "Congratulations! You guessed the number correctly!";
+    }
+  </script>
+</body>
+</html>
