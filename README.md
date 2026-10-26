@@ -9,4 +9,4 @@ The game tells you if your guess is too high or too low until you get it right.
 
 ## Play in the browser
 
-https://YOUR-USERNAME.github.io/guess-the-number/
+https://faith-amanze.github.io/guess-the-number/
